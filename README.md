@@ -7,4 +7,5 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0178-rank-scores](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/0178-rank-scores) |
+| [0262-trips-and-users](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/0262-trips-and-users) |
 <!---LeetCode Topics End-->
