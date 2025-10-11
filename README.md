@@ -32,11 +32,12 @@ This repository is log of my daily SQL study.
 
 
 
+
 # 📈 Progress Log
 | Date | Problems Added | Total |
 |------|----------------|--------|
 | 2025-10-06 | 🟢 3 | 3 |
 | 2025-10-10 | 🟢 7 | 10 |
-| 2025-10-11 | 🟢 1 | 11 |
+| 2025-10-11 | 🟢 2 | 12 |
 
-> **🎯 Total:** 11 problems solved
+> **🎯 Total:** 12 problems solved
