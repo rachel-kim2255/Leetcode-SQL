@@ -1,7 +1,7 @@
 # KEY: NOT IN, LEFT JOIN
-# LEARN: 
+# LEARN: it's better to use NOT EXISTS(2) because it's NULL-safe.
 
-
+# 1) NOT IN
 -- select  name
 -- FROM    SalesPerson
 -- where   name NOT IN
@@ -13,6 +13,7 @@
 --             ON  o.com_id = c.com_id
 --     WHERE   c.name = 'RED')
 
+# 2) NOT EXISTS
 SELECT s.name
 FROM SalesPerson AS s
 WHERE NOT EXISTS (
