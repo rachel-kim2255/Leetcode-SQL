@@ -43,9 +43,11 @@ jobs:
           echo "| Date | Problems Added | Total |" >> README.md
           echo "|------|----------------|--------|" >> README.md
           
-          # 🔹 과거 커밋 기준으로 .sql 생성 일자 계산
-          git log --reverse --pretty=format:"%ad" --date=short --name-only --diff-filter=A -- '*.sql' \
-            | grep '\.sql$' -B1 | grep -E '^[0-9]{4}-' | sort | uniq -c > tmp.log
+       
+          # 🔹 과거 커밋 기준으로 .sql 생성 일자만 계산 (파일 이름 제외)
+          git log --reverse --pretty=format:"%ad" --date=short --diff-filter=A -- '*.sql' \
+            | sort | uniq -c > tmp.log
+
 
           total_count=0
           while read count date; do
