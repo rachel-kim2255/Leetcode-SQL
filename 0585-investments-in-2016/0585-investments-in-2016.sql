@@ -1,5 +1,7 @@
 # Write your MySQL query statement below
 
+# KEY: IN, NOT IN, HAVING 
+# LEARN: (lat, lon) NOT IN
 
 SELECT ROUND(SUM(tiv_2016),2) as tiv_2016
 FROM   Insurance 
