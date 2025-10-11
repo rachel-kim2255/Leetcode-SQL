@@ -10,20 +10,30 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # ✅ 전체 커밋 이력 불러오기
+          fetch-depth: 0  # 
 
-      - name: Count SQL problems
+      - name: Count SQL problems (LeetHub commits only)
         id: count
         run: |
-          count=$(find . -type f -name "*.sql" | wc -l)
+          # README, stats.json 제외
+          git log --pretty=format:"%ad %s" --date=short | grep "LeetHub" > leethub_commits.log || true
+
+          # LeetHub 커밋이 존재할 경우에만 SQL 파일 카운트
+          if [ -s leethub_commits.log ]; then
+            count=$(find . -type f -name "*.sql" | wc -l)
+          else
+            count=0
+          fi
+
           echo "count=$count" >> $GITHUB_ENV
           echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+          cat leethub_commits.log || echo "⚠️ No new LeetHub commits detected"
 
       - name: Append or update progress
         run: |
           date="$date"
           total="$count"
-          
+
           # 오늘 새로 추가된 파일 수 계산
           previous_total=$(grep -Eo '[0-9]+$' README.md | tail -1)
           if [ -z "$previous_total" ]; then
@@ -40,7 +50,9 @@ jobs:
           echo "| Date | Problems Added | Total |" >> README.md
           echo "|------|----------------|--------|" >> README.md
           
+          # LeetHub로 생성된 커밋 기준으로 SQL 파일 날짜만 카운트
           git log --reverse --pretty=format:"%ad" --date=short -- '**/*.sql' | sort | uniq -c > tmp.log
+
           total=0
           while read count date; do
             total=$((total + count))
@@ -55,6 +67,12 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add README.md
-          git commit -m "Auto update Progress Log"
-          git push
+
+          # 변경사항 있을 때만 커밋
+          if [ -n "$(git status --porcelain)" ]; then
+            git add README.md
+            git commit -m "Auto update Progress Log"
+            git push
+          else
+            echo "✅ No new changes to commit."
+          fi
