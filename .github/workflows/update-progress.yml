@@ -60,7 +60,7 @@ jobs:
 
       - name: Update main profile README
         env:
-          PROFILE_TOKEN: ${{ secrets.PROFILE_UPDATE_TOKEN_sql }}
+          PROFILE_TOKEN: ${{ secrets.PROFILE_UPDATE_TOKEN_SQL }}
         run: |
           # 🔹 프로필 리포 복제
           git clone https://rachel-kim2255:${PROFILE_TOKEN}@github.com/rachel-kim2255/rachel-kim2255.git profile-repo
