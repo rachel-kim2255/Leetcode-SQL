@@ -26,3 +26,10 @@ This repository is log of my daily SQL study.
 | 2025-10-11 | 🟢 1 | 1 |
 
 > **🎯 Total:** 0 problems solved
+
+# 📈 Progress Log
+| Date | Problems Added | Total |
+|------|----------------|--------|
+| 2025-10-11 | 🟢 1 | 1 |
+
+> **🎯 Total:** 0 problems solved
