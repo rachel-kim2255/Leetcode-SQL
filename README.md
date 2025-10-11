@@ -21,9 +21,11 @@ This repository is log of my daily SQL study.
 <!---LeetCode Topics End-->
 
 
+
 # 📈 Progress Log
 | Date | Problems Added | Total |
 |------|----------------|--------|
-| 2025-10-11 | 🟢 1 | 1 |
+| 2025-10-06 | 🟢 3 | 3 |
+| 2025-10-10 | 🟢 9 | 12 |
 
-> **🎯 Total:** 1 problems solved
+> **🎯 Total:** 12 problems solved
