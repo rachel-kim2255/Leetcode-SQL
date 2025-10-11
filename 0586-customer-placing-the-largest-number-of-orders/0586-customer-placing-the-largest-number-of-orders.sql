@@ -1,4 +1,5 @@
-# Write your MySQL query statement below
+# KEY: group by, order by
+# LEARN: LIMIT / TOP is not possible in mysql
 
 SELECT  customer_number
 FROM    Orders
