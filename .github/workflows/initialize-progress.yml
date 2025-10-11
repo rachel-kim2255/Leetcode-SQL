@@ -1,0 +1,33 @@
+name: Initialize Full Progress Log
+on:
+  workflow_dispatch:
+
+jobs:
+  init-progress:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Build initial progress log
+        run: |
+          echo "" >> README.md
+          echo "# 📈 Progress Log" >> README.md
+          echo "| Date | Problems Added | Total |" >> README.md
+          echo "|------|----------------|--------|" >> README.md
+          
+          total=0
+          git log --reverse --pretty="%ad" --date=short -- '*.sql' | sort | uniq -c | while read count date; do
+            total=$((total + count))
+            echo "| $date | 🟢 $count | $total |" >> README.md
+          done
+
+          echo "" >> README.md
+          echo "> **🎯 Total:** $total problems solved" >> README.md
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add README.md
+          git commit -m "Initialize full Progress Log"
+          git push
