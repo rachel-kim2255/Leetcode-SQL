@@ -16,14 +16,16 @@ jobs:
           echo "|------|----------------|--------|" >> README.md
           
           total=0
-          # .sql 파일이 커밋된 모든 날짜 수집 (과거 포함)
-          git log --reverse --pretty=format:"%ad" --date=short -- '*.sql' | sort | uniq -c | while read count date; do
+          git log --reverse --pretty=format:"%ad" --date=short -- '**/*.sql' | sort | uniq -c > tmp.log
+
+          while read count date; do
             total=$((total + count))
             echo "| $date | 🟢 $count | $total |" >> README.md
-          done
+          done < tmp.log
 
           echo "" >> README.md
           echo "> **🎯 Total:** $total problems solved" >> README.md
+          rm tmp.log
 
       - name: Commit and push
         run: |
