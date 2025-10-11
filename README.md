@@ -9,6 +9,7 @@ This repository is log of my daily SQL study.
 |  |
 | ------- |
 | [0175-combine-two-tables](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/0175-combine-two-tables) |
+| [0176-second-highest-salary](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/0176-second-highest-salary) |
 | [0178-rank-scores](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/0178-rank-scores) |
 | [0262-trips-and-users](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/0262-trips-and-users) |
 | [0570-managers-with-at-least-5-direct-reports](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/0570-managers-with-at-least-5-direct-reports) |
