@@ -15,14 +15,9 @@ jobs:
       - name: Count only new SQL files
         id: count
         run: |
-          # 🔹 1. 현재 SQL 파일 총 개수
           total_sql=$(find . -type f -name "*.sql" | wc -l)
-
-          # 🔹 2. README에서 이전 total 값 가져오기
           prev_total=$(grep -Eo '[0-9]+$' README.md | tail -1)
           [ -z "$prev_total" ] && prev_total=0
-
-          # 🔹 3. 새로 추가된 파일 수 계산
           added=$((total_sql - prev_total))
           [ $added -lt 0 ] && added=0
 
@@ -36,18 +31,13 @@ jobs:
           total=$total_sql
           today=$today
 
-          # 🔹 Progress Log 테이블 새로 생성
           sed -i '/# 📈 Progress Log/,$d' README.md
           echo "" >> README.md
           echo "# 📈 Progress Log" >> README.md
           echo "| Date | Problems Added | Total |" >> README.md
           echo "|------|----------------|--------|" >> README.md
-          
-       
-          # 🔹 과거 커밋 기준으로 .sql 생성 일자만 계산 (파일 이름 제외)
-          git log --reverse --pretty=format:"%ad" --date=short --diff-filter=A -- '*.sql' \
-            | sort | uniq -c > tmp.log
 
+          git log --reverse --pretty=format:"%ad" --date=short --diff-filter=A -- '*.sql' | sort | uniq -c > tmp.log
 
           total_count=0
           while read count date; do
@@ -70,3 +60,75 @@ jobs:
           else
             echo "✅ No new updates."
           fi
+
+      - name: Update main profile README
+        run: |
+          git clone https://github.com/rachel-kim2255/rachel-kim2255.git profile-repo
+          cd profile-repo
+
+          sed -i '/<h3 align="left">📈 SQL-LeetCode Progress Log/,$d' README.md
+          echo "" >> README.md
+          echo "<h3 align=\"left\">📈 SQL-LeetCode Progress Log</h3>" >> README.md
+          echo "" >> README.md
+          echo "| Date | Problems Added | Total |" >> README.md
+          echo "|------|----------------|--------|" >> README.md
+          
+          cd ..
+          git log --reverse --pretty=format:"%ad" --date=short --diff-filter=A -- '*.sql' | sort | uniq -c > tmp.log
+
+          cd profile-repo
+          total_count=0
+          while read count date; do
+            total_count=$((total_count + count))
+            echo "| $date | 🟢 $count | $total_count |" >> README.md
+          done < ../tmp.log
+          rm ../tmp.log
+
+          echo "" >> README.md
+          echo "> **🎯 Total:** $total_count problems solved" >> README.md
+          echo "" >> README.md
+          echo "🔗 [View full repository → Leetcode-SQL](https://github.com/rachel-kim2255/Leetcode-SQL)" >> README.md
+
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add README.md
+          git commit -m "Auto sync SQL-LeetCode Progress Log to profile"
+          git push
+
+
+    
+     - name: Update main profile README
+         run: |
+           git clone https://github.com/rachel-kim2255/rachel-kim2255.git profile-repo
+           cd profile-repo
+    
+           # Progress Log 부분 삭제 후 다시 추가
+           sed -i '/<h3 align="left">📈 SQL-LeetCode Progress Log/,$d' README.md
+           echo "" >> README.md
+           echo "<h3 align=\"left\">📈 SQL-LeetCode Progress Log</h3>" >> README.md
+           echo "" >> README.md
+           echo "| Date | Problems Added | Total |" >> README.md
+           echo "|------|----------------|--------|" >> README.md
+           
+           cd ..
+           git log --reverse --pretty=format:"%ad" --date=short --diff-filter=A -- '*.sql' | sort | uniq -c > tmp.log
+    
+           cd profile-repo
+           total_count=0
+           while read count date; do
+             total_count=$((total_count + count))
+             echo "| $date | 🟢 $count | $total_count |" >> README.md
+           done < ../tmp.log
+           rm ../tmp.log
+    
+           echo "" >> README.md
+           echo "> **🎯 Total:** $total_count problems solved" >> README.md
+           echo "" >> README.md
+           echo "🔗 [View full repository → Leetcode-SQL](https://github.com/rachel-kim2255/Leetcode-SQL)" >> README.md
+    
+           git config user.name "github-actions"
+           git config user.email "actions@github.com"
+           git add README.md
+           git commit -m "Auto sync SQL-LeetCode Progress Log to profile"
+           git push
+    
