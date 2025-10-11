@@ -16,7 +16,8 @@ jobs:
           echo "|------|----------------|--------|" >> README.md
           
           total=0
-          git log --reverse --pretty="%ad" --date=short -- '*.sql' | sort | uniq -c | while read count date; do
+          # .sql 파일이 커밋된 모든 날짜 수집 (과거 포함)
+          git log --reverse --pretty=format:"%ad" --date=short -- '*.sql' | sort | uniq -c | while read count date; do
             total=$((total + count))
             echo "| $date | 🟢 $count | $total |" >> README.md
           done
