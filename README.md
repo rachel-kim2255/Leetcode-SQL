@@ -20,19 +20,6 @@ This repository is log of my daily SQL study.
 | [1179-game-play-analysis-i](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1179-game-play-analysis-i) |
 <!---LeetCode Topics End-->
 
-# 📈 Progress Log
-| Date | Problems Added | Total |
-|------|----------------|--------|
-| 2025-10-11 | 🟢 1 | 1 |
-
-> **🎯 Total:** 0 problems solved
-
-# 📈 Progress Log
-| Date | Problems Added | Total |
-|------|----------------|--------|
-| 2025-10-11 | 🟢 1 | 1 |
-
-> **🎯 Total:** 0 problems solved
 
 # 📈 Progress Log
 | Date | Problems Added | Total |
