@@ -1,0 +1,60 @@
+name: Update Progress Log
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-progress:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # ✅ 전체 커밋 이력 불러오기
+
+      - name: Count SQL problems
+        id: count
+        run: |
+          count=$(find . -type f -name "*.sql" | wc -l)
+          echo "count=$count" >> $GITHUB_ENV
+          echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+
+      - name: Append or update progress
+        run: |
+          date="$date"
+          total="$count"
+          
+          # 오늘 새로 추가된 파일 수 계산
+          previous_total=$(grep -Eo '[0-9]+$' README.md | tail -1)
+          if [ -z "$previous_total" ]; then
+            added=$count
+          else
+            added=$((count - previous_total))
+            [ $added -lt 0 ] && added=0
+          fi
+
+          # 기존 Progress Log 제거 후 다시 생성
+          sed -i '/# 📈 Progress Log/,$d' README.md
+          echo "" >> README.md
+          echo "# 📈 Progress Log" >> README.md
+          echo "| Date | Problems Added | Total |" >> README.md
+          echo "|------|----------------|--------|" >> README.md
+          
+          git log --reverse --pretty=format:"%ad" --date=short -- '**/*.sql' | sort | uniq -c > tmp.log
+          total=0
+          while read count date; do
+            total=$((total + count))
+            echo "| $date | 🟢 $count | $total |" >> README.md
+          done < tmp.log
+          rm tmp.log
+
+          echo "" >> README.md
+          echo "> **🎯 Total:** $total problems solved" >> README.md
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add README.md
+          git commit -m "Auto update Progress Log"
+          git push
