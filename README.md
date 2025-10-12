@@ -43,11 +43,12 @@ This repository is log of my daily SQL study.
 
 
 
+
 # 📈 Progress Log
 | Date | Problems Added | Total |
 |------|----------------|--------|
 | 2025-10-06 | 🟢 3 | 3 |
 | 2025-10-10 | 🟢 7 | 10 |
-| 2025-10-11 | 🟢 4 | 14 |
+| 2025-10-11 | 🟢 5 | 15 |
 
-> **🎯 Total:** 14 problems solved
+> **🎯 Total:** 15 problems solved
