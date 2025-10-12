@@ -66,19 +66,20 @@ jobs:
           git clone https://rachel-kim2255:${PROFILE_TOKEN}@github.com/rachel-kim2255/rachel-kim2255.git profile-repo
           cd profile-repo
 
-          # 🔹 Progress Log 영역만 갱신 (기존 프로젝트는 절대 삭제 안 함)
+          # 🔹 Progress Log 갱신용 마커 지정
           start_marker="<!-- START SQL PROGRESS -->"
           end_marker="<!-- END SQL PROGRESS -->"
-          temp_file=$(mktemp)
 
-          # 기존 Progress 영역 제거
+          # 🔹 기존 README에서 Progress 영역 제외하고 나머지 보존
+          temp_file=$(mktemp)
           awk -v start="$start_marker" -v end="$end_marker" '
-            $0 ~ start {print; in_block=1; next}
+            $0 ~ start {print $0; in_block=1; next}
             $0 ~ end {in_block=0; next}
-            !in_block {print}
+            !in_block {print $0}
           ' README.md > "$temp_file" && mv "$temp_file" README.md
 
-          # 새 Progress Log 삽입
+          # 🔹 새 Progress Log 임시 파일 생성
+          tmp_progress=$(mktemp)
           {
             echo "$start_marker"
             echo ""
@@ -86,19 +87,18 @@ jobs:
             echo ""
             echo "| Date | Problems Added | Total |"
             echo "|------|----------------|--------|"
-          } >> README.md
+          } > "$tmp_progress"
 
           cd ..
           git log --reverse --pretty=format:"%ad" --date=short --diff-filter=A -- '*.sql' \
             | sort | uniq -c > tmp.log
 
-          cd profile-repo
           total_count=0
           while read count date; do
             total_count=$((total_count + count))
-            echo "| $date | 🟢 $count | $total_count |" >> README.md
-          done < ../tmp.log
-          rm ../tmp.log
+            echo "| $date | 🟢 $count | $total_count |" >> "$tmp_progress"
+          done < tmp.log
+          rm tmp.log
 
           {
             echo ""
@@ -107,11 +107,29 @@ jobs:
             echo "🔗 [View full repository → Leetcode-SQL](https://github.com/rachel-kim2255/Leetcode-SQL)"
             echo ""
             echo "$end_marker"
-          } >> README.md
+          } >> "$tmp_progress"
+
+          cd profile-repo
+
+          # 🔹 기존 README에 새 Progress Log 삽입
+          temp_file2=$(mktemp)
+          awk -v start="$start_marker" -v end="$end_marker" -v insert="$(cat "$tmp_progress")" '
+            BEGIN {split(insert, lines, "\n")}
+            {
+              if ($0 ~ start) {
+                for (i in lines) print lines[i]
+                in_block=1
+                next
+              }
+              if ($0 ~ end) {in_block=0; next}
+              if (!in_block) print
+            }
+          ' README.md > "$temp_file2" && mv "$temp_file2" README.md
+          rm "$tmp_progress"
 
           # 🔹 커밋 & 푸시
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add README.md
-          git commit -m "Auto sync SQL-LeetCode Progress Log (safe section update)"
+          git commit -m "✅ Safe sync SQL-LeetCode Progress Log (no project deletion)"
           git push
