@@ -52,12 +52,13 @@ This repository is log of my daily SQL study.
 
 
 
+
 # 📈 Progress Log
 | Date | Problems Added | Total |
 |------|----------------|--------|
 | 2025-10-06 | 🟢 3 | 3 |
 | 2025-10-10 | 🟢 7 | 10 |
 | 2025-10-11 | 🟢 5 | 15 |
-| 2025-10-13 | 🟢 2 | 17 |
+| 2025-10-13 | 🟢 3 | 18 |
 
-> **🎯 Total:** 17 problems solved
+> **🎯 Total:** 18 problems solved
