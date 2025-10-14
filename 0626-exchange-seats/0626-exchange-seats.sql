@@ -10,6 +10,6 @@ SELECT  (CASE
         ELSE id END) AS id, 
         student
 FROM    Seat 
-ORDER BY id, student DESC;
+ORDER BY id ASC;
 
 
