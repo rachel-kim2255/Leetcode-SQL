@@ -1,4 +1,6 @@
-# Write your MySQL query statement below
+# KEY: LEFT JOIN, conditional aggregation, DISTINCT
+# Learn: Handling NULLs, CASE+COUNT pattern  
+# Note: Always group by base table (u.user_id)
 
 
 SELECT  u.user_id as buyer_id, u.join_date,
