@@ -35,6 +35,7 @@ This repository is log of my daily SQL study.
 | [1174-sales-analysis-iii](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1174-sales-analysis-iii) |
 | [1179-game-play-analysis-i](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1179-game-play-analysis-i) |
 | [1245-user-activity-for-the-past-30-days-i](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1245-user-activity-for-the-past-30-days-i) |
+| [1258-article-views-i](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1258-article-views-i) |
 <!---LeetCode Topics End-->
 
 
