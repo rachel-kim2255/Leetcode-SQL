@@ -71,6 +71,7 @@ This repository is log of my daily SQL study.
 
 
 
+
 # 📈 Progress Log
 | Date | Problems Added | Total |
 |------|----------------|--------|
@@ -80,5 +81,6 @@ This repository is log of my daily SQL study.
 | 2025-10-13 | 🟢 3 | 18 |
 | 2025-11-03 | 🟢 3 | 21 |
 | 2025-11-07 | 🟢 5 | 26 |
+| 2025-11-08 | 🟢 1 | 27 |
 
-> **🎯 Total:** 26 problems solved
+> **🎯 Total:** 27 problems solved
