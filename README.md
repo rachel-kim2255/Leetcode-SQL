@@ -33,6 +33,7 @@ This repository is log of my daily SQL study.
 | [1155-product-sales-analysis-iii](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1155-product-sales-analysis-iii) |
 | [1161-project-employees-i](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1161-project-employees-i) |
 | [1174-sales-analysis-iii](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1174-sales-analysis-iii) |
+| [1174-immediate-food-delivery-ii](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1174-immediate-food-delivery-ii) |
 | [1179-game-play-analysis-i](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1179-game-play-analysis-i) |
 | [1193-monthly-transactions-i](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1193-monthly-transactions-i) |
 | [1211-queries-quality-and-percentage](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1211-queries-quality-and-percentage) |
