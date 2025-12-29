@@ -51,6 +51,7 @@ This repository is log of my daily SQL study.
 | [1517-find-users-with-valid-e-mails](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1517-find-users-with-valid-e-mails) |
 | [1527-patients-with-a-condition](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1527-patients-with-a-condition) |
 | [1541-top-travellers](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1541-top-travellers) |
+| [1907-count-salary-categories](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1907-count-salary-categories) |
 <!---LeetCode Topics End-->
 
 
