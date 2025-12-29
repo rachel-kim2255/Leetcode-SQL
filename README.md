@@ -44,6 +44,7 @@ This repository is log of my daily SQL study.
 | [1278-product-price-at-a-given-date](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1278-product-price-at-a-given-date) |
 | [1341-movie-rating](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1341-movie-rating) |
 | [1390-average-selling-price](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1390-average-selling-price) |
+| [1393-capital-gainloss](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1393-capital-gainloss) |
 | [1415-students-and-examinations](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1415-students-and-examinations) |
 | [1484-group-sold-products-by-the-date](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1484-group-sold-products-by-the-date) |
 | [1509-replace-employee-id-with-the-unique-identifier](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1509-replace-employee-id-with-the-unique-identifier) |
