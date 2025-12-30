@@ -52,6 +52,7 @@ This repository is log of my daily SQL study.
 | [1527-patients-with-a-condition](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1527-patients-with-a-condition) |
 | [1541-top-travellers](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1541-top-travellers) |
 | [1907-count-salary-categories](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1907-count-salary-categories) |
+| [1934-confirmation-rate](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1934-confirmation-rate) |
 <!---LeetCode Topics End-->
 
 
