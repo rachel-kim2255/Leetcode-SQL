@@ -1,0 +1,5 @@
+# Tweets: pk(tweet_id)
+
+SELECT  tweet_id
+FROM    Tweets
+WHERE  LENGTH(content) > 15
