@@ -5,5 +5,5 @@ SELECT  e1.employee_id, e1.name,
         ROUND(AVG(e2.age), 0) AS average_age
 FROM    employees as e1 INNER JOIN employees as e2
         ON e1.employee_id = e2.reports_to
-GROUP BY e1.employee_id
+GROUP BY e1.employee_id, e1.name
 ORDER BY e1.employee_id;
