@@ -59,6 +59,7 @@ This repository is log of my daily SQL study.
 | [1729-find-followers-count](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1729-find-followers-count) |
 | [1731-the-number-of-employees-which-report-to-each-employee](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1731-the-number-of-employees-which-report-to-each-employee) |
 | [1741-find-total-time-spent-by-each-employee](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1741-find-total-time-spent-by-each-employee) |
+| [1757-recyclable-and-low-fat-products](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1757-recyclable-and-low-fat-products) |
 | [1907-count-salary-categories](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1907-count-salary-categories) |
 | [1934-confirmation-rate](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1934-confirmation-rate) |
 | [3220-odd-and-even-transactions](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/3220-odd-and-even-transactions) |
