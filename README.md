@@ -68,6 +68,7 @@ This repository is log of my daily SQL study.
 | [3421-find-students-who-improved](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/3421-find-students-who-improved) |
 | [3475-dna-pattern-recognition](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/3475-dna-pattern-recognition) |
 | [3497-analyze-subscription-conversion](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/3497-analyze-subscription-conversion) |
+| [3521-find-product-recommendation-pairs](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/3521-find-product-recommendation-pairs) |
 <!---LeetCode Topics End-->
 
 
