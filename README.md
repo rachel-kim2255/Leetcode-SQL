@@ -184,6 +184,7 @@ This repository is log of my daily SQL study.
 
 
 
+
 # 📈 Progress Log
 | Date | Problems Added | Total |
 |------|----------------|--------|
