@@ -1,3 +1,27 @@
+# 7/20
+
+
+SELECT  name
+FROM    salesperson s
+WHERE   sales_id NOT IN (
+        select  o.sales_id
+        from    orders as o JOIN company as c 
+                on o.com_id = c.com_id
+                and c.name = 'RED'
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
 -- -- SalesPerson: pk/saels_id
 -- -- Company: pk/com_id
 -- -- Orders: pk/order_id, fk/com_id-Compnay, fk/sales_id-SalesPerson
@@ -66,11 +90,11 @@
 
 
 
-select  distinct s.name
-FROM    salesperson s LEFT JOIN orders o ON s.sales_id = o.sales_id
-        LEFT JOIN company c on o.com_id = c.com_id
-where   s.name not in (
-    SELECT  s.name as name 
-    FROM    salesperson s LEFT JOIN orders o ON s.sales_id = o.sales_id
-            LEFT JOIN company c on o.com_id = c.com_id
-    WHERE   c.name = 'RED')
+-- select  distinct s.name
+-- FROM    salesperson s LEFT JOIN orders o ON s.sales_id = o.sales_id
+--         LEFT JOIN company c on o.com_id = c.com_id
+-- where   s.name not in (
+--     SELECT  s.name as name 
+--     FROM    salesperson s LEFT JOIN orders o ON s.sales_id = o.sales_id
+--             LEFT JOIN company c on o.com_id = c.com_id
+--     WHERE   c.name = 'RED')
