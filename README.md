@@ -34,6 +34,7 @@ This repository is log of my daily SQL study.
 | [0626-exchange-seats](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/0626-exchange-seats) |
 | [0627-swap-salary](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/0627-swap-salary) |
 | [0627-swap-sex-of-employees](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/0627-swap-sex-of-employees) |
+| [1050-actors-and-directors-who-cooperated-at-least-three-times](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1050-actors-and-directors-who-cooperated-at-least-three-times) |
 | [1135-customers-who-bought-all-products](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1135-customers-who-bought-all-products) |
 | [1136-actors-and-directors-who-cooperated-at-least-three-times](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1136-actors-and-directors-who-cooperated-at-least-three-times) |
 | [1153-product-sales-analysis-i](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1153-product-sales-analysis-i) |
