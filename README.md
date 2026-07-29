@@ -53,6 +53,7 @@ This repository is log of my daily SQL study.
 | [1258-article-views-i](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1258-article-views-i) |
 | [1268-market-analysis-i](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1268-market-analysis-i) |
 | [1278-product-price-at-a-given-date](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1278-product-price-at-a-given-date) |
+| [1280-students-and-examinations](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1280-students-and-examinations) |
 | [1341-movie-rating](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1341-movie-rating) |
 | [1390-average-selling-price](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1390-average-selling-price) |
 | [1393-capital-gainloss](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1393-capital-gainloss) |
