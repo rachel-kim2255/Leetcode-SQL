@@ -65,6 +65,7 @@ This repository is log of my daily SQL study.
 | [1517-find-users-with-valid-e-mails](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1517-find-users-with-valid-e-mails) |
 | [1527-patients-with-a-condition](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1527-patients-with-a-condition) |
 | [1541-top-travellers](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1541-top-travellers) |
+| [1581-customer-who-visited-but-did-not-make-any-transactions](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1581-customer-who-visited-but-did-not-make-any-transactions) |
 | [1633-percentage-of-users-attended-a-contest](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1633-percentage-of-users-attended-a-contest) |
 | [1661-average-time-of-process-per-machine](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1661-average-time-of-process-per-machine) |
 | [1667-fix-names-in-a-table](https://github.com/rachel-kim2255/Leetcode-SQL/tree/master/1667-fix-names-in-a-table) |
