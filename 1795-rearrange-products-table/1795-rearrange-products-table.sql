@@ -1,11 +1,14 @@
+# 9.15 FAILED
+
 SELECT  product_id, 'store1' as store, store1 as price
-FROM    products 
+FROM    products
 WHERE   store1 is not null
-UNION ALL
-SELECT  product_id, 'store2', store2 
+UNION
+SELECT  product_id, 'store2' as store, store2 as price
 FROM    products
 WHERE   store2 is not null
-UNION ALL
-SELECT  product_id, 'store3', store3
-FROM    Products 
-WHERE   store3 IS NOT NULL;
+UNION
+SELECT  product_id, 'store3' as store, store3 as price
+FROM    products
+WHERE   store3 is not null
+
